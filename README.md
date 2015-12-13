@@ -1,9 +1,9 @@
 # Module 2 - Process Analysis
 
 In this module, you'll learn how to identify key elements of process analysis:
-*flow rates*, and *flow times*, how to uncover *bottlenecks*, how to *optimize
-labor and inventory*, and how to handle the *complexities of multiple flow
-units*. 
+*flow rates (throughput)*, and *flow times*, how to uncover bottlenecks, how to
+optimize labor and *inventory*, and how to handle the complexities of multiple
+flow units. 
 
 At the end of this module, you'll be able to break down operations into
 *processes* which can then be improved to *maximize profits and efficiency*.
@@ -14,39 +14,59 @@ At the end of this module, you'll be able to break down operations into
 
 ![](images/02-04-subway-sitting-store.png)
 
+Draw a graph of Customers (y) vs Time (x)
+- Cumulative Inflow = point when customer enters
+- Cumulative Outflow = point when customer leaves
+- **Inventory** = Vertical distance in (Cumulative Inflow - Cumulative Outflow)
+- **Flow Time** = horizontal distance in (Time to serve the customer)
+
 ### The 3 Basic Measures
 
 - *Flow rate / throughput*: number of flow units going through the process per
   unit of time
+  - = (Customer/hour)
 - *Flow Time*: time it takes a flow unit to go from the beginning to the end of
   the process
+  - horizontal dist in 2 lines
 - *Inventory*: the number of flow units in the process at a given moment in
   time
-- *Flow Unit*: Customer or Sandwich
+  - vertical dist in 2 lines
+- *Flow Unit*: What we want to measure e.g. Customer or Sandwich
 
-Immigration department 
-- Applications
-- Approved or rejected cases
-- Processing time
-- Pending cases
+|       | Immigration department  | Champagne             |
+| ----- | ----------------------- | --------------------- | 
+| FU  = | Applications            | Bottle of champagne   |
+| FT  = | Approved/rejected cases | Bottles sold per year |
+| FT  = | Processing time         | Time in the cellar    |
+| Inv = | Pending cases           | Content of cellar     |
 
-Champagne 
-- Bottle of champagne
-- Bottles sold per year
-- Time in the cellar
-- Content of cellar
+|       | MBA Program      | Auto company   |
+| ----- | ---------------- | -------------- |
+| FU  = | Student          | Car            |
+| FT  = | Graduating class | Sales per year |
+| FT  = | 2 years          | 60 days        |
+| Inv = | Total population | Inventory      |
+ 
 
-MBA program 
-- Student
-- Graduating class
-- 2 years
-- Total campus population
+### Quiz
 
-Auto company 
-- Car
-- Sales per year
-- 60 days
-- Inventory
+Between the hours of noon and 1pm, 70 customers enter ACME pizza and 60 leave
+with pies in hand. What is ACME's inventory of customers at 1pm assuming it was
+zero at noon?
+- 2
+- 5
+- 10
+- 20
+
+### Summary
+
+**Inventory** = # flow units in system
+
+**Flow rate** = # flow units going through the system
+
+**Flow Time** = total time for flow unit to go from beginning to end
+
+Inventory happens whenever there is a mismatch between supply and demand
 
 ## Finding the Bottleneck
 
@@ -204,7 +224,7 @@ make to stock)
 
 McDonald's vs Subway
 
-| McDonald’s                             | Subway                          |   
+| McDonald’s (Make-to-Stock)             | Subway (Make-to-Order)          |   
 | -------------------------------------- | ------------------------------- |
 | 1. Make a batch of sandwiches          | 1. Customer orders              |
 | 2. Sandwiches wait for customer orders | 2. Customer waits for sandwich  |
