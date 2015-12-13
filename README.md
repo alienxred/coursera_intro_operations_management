@@ -1,4 +1,4 @@
-# Module 2 - Process Analysis
+# 02 Process Analysis
 
 In this module, you'll learn how to identify key elements of process analysis:
 *flow rates (throughput)*, and *flow times*, how to uncover bottlenecks, how to
@@ -8,7 +8,7 @@ flow units.
 At the end of this module, you'll be able to break down operations into
 *processes* which can then be improved to *maximize profits and efficiency*.
 
-## The 3 Measures: Flow Rate, Inventory, and Flow Time
+## 02.01 The 3 Measures: Flow Rate, Inventory, and Flow Time
 
 ### Subway - Sitting in Front of the Store
 
@@ -68,7 +68,7 @@ zero at noon?
 
 Inventory happens whenever there is a mismatch between supply and demand
 
-## Finding the Bottleneck
+## 02.02 Finding the Bottleneck
 
 3 Steps
 - Create a process flow diagram
@@ -79,22 +79,64 @@ Inventory happens whenever there is a mismatch between supply and demand
 
 ![](images/02-10-subway-inside.png)
 
-Draw a process flow diagram
+**Processing Times** = Unit of time / Flow Unit 
+- e.g. Station 1 = 37 secs/customer
+- e.g. Station 2 = 46 secs/customer
+- same as **activity times**
+
+Image above
+- need 3 workers
+- understand activities to make a sandwich
+- can calculate total processing times
+
+**Process Flow Diagram**
 
 ![](images/02-12-drawing-process-flow.png)
 
+- arrow = flow of unit
+- box = activity i.e. 37s/unit processing time for station 1
+- triangle = flow unit waiting
+
 ### Basic Process Vocabulary
 
-- *Processing times*: how long does the worker spend on the task?
-- *Capacity* = 1/processing time: how many units can the worker make per unit
+- **Processing times**: how long does the worker spend on the task?
+  - i.e. 46 secs/cust * 3600 sec/hour = 78 customers / hour
+- **Capacity** = 1/processing time: how many units can the worker make per unit
   of time
   - If there are m workers at the activity: Capacity=m/activity time
-- *Bottleneck*: process step with the lowest capacity
-- *Process capacity*: capacity of the bottleneck
-- *Flow rate* = Minimum{Demand rate, Process Capacity)
-- *Utilization* = Flow Rate / Capacity
-- *Flow Time*: The amount of time it takes a flow unit to go through the process
-- *Inventory*: The number of flow units in the system
+- **Bottleneck**: process step with the _lowest capacity_
+- **Process capacity**: capacity of the bottleneck
+- **Flow rate** = Minimum{Demand rate, Process Capacity)
+- **Utilization** = Flow Rate / Capacity
+- **Flow Time**: The amount of time it takes a flow unit to go through the process
+- **Inventory**: The number of flow units in the system
+
+### Example spreadsheet for Subway example above 
+
+| Resource           | Station 1 | Station 2 | Station 3 | Units      |
+| ------------------ | --------- | --------- | --------- | ---------- |
+| Proc Time          | 37        | 46        | 37        | sec/unit   |
+| Capacity (1/ProcT) | 0.027027  | 0.021739  | 0.027027  | units/sec  |
+| Capacity/Hour      | 97.2973   | 78.26087  | 97.2973   | units/hour |
+| Proc Capacity      |           |           |           |            |
+| Demand             | 50        | 50        | 50        |            |
+| Utilization        | 0.513889  | 0.638889  | 0.513889  |            |
+
+### Quiz
+
+The flow rate of a process is always less or equal to the capacity of the process
+- true
+- false
+- It depnds on the number of resources
+- Cannot be determined
+
+### Summary
+
+Introduced lots of vocabulary.
+
+Allow to calculate flow rate without viewing process in action.
+
+We can now predict the flow rate
 
 ## Labor Cost and Labor Utilization 
 
