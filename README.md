@@ -204,12 +204,12 @@ make to stock)
 
 McDonald's vs Subway
 
-    - McDonald’s                             | Subway   
-    - ---------------------------------------|---------------------------------
-    - 1. Make a batch of sandwiches          | 1. Customer orders
-    - 2. Sandwiches wait for customer orders | 2. Customer waits for sandwich
-    - 3. orders filled immediately           | 3. orders filled with delay
-    - => Sandwich waits for customer         | => Customer waits for sandwich            
+    | McDonald’s                             | Subway   
+    | ---------------------------------------|---------------------------------
+    | 1. Make a batch of sandwiches          | 1. Customer orders
+    | 2. Sandwiches wait for customer orders | 2. Customer waits for sandwich
+    | 3. orders filled immediately           | 3. orders filled with delay
+    | => Sandwich waits for customer         | => Customer waits for sandwich            
 Which approach is better? 
 
 Make-to-Stock advantages include:
