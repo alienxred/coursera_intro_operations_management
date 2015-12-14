@@ -293,8 +293,8 @@ average, in the oven?
 
 | Dell                           | Compaq                         |    
 | ------------------------------ | ------------------------------ | 
-| Inventory = $ 391 M            | Inventory = $ 2.003 M          | 
-| Cost of Goods = $20 B /yr      | Cost of Goods = $ 25.264 M /yr |
+| Inventory = $ 391 M            | Inventory = $ 2.003 B          | 
+| Cost of Goods = $20 B /yr      | Cost of Goods = $ 25.264 B /yr |
 | T = (391/20000) * 365 = 7 days | T = 365 * (2.003/25.263) = 29  |
 | Inv Turns = 1/T = 51           | Inv Turns = 1/T = 12           | 
 
@@ -331,9 +331,16 @@ Retailer B has dramatic competitive advantage just in per unit inventory cost.
 
 Powerful metric to measure how well you're using inventory capital.
 
-### Buffer or Suffer
+## 02.06 Make to Stock vs Make to Order | Reasons for Inventory
 
-Food Truck - Every five minutes:
+While we want to be lean, there are reasons to hole inventory despite the
+holding cost.
+
+5 reasons for inventory => 5 reasons for **longer flow time**
+
+### Simple Process Flow - A Food Truck
+
+Every five minutes:
 - You get 0, 1, or 2 orders with equal probability
 - You have a capacity of 0, 1, or 2 with equal probability
 - It is not possible to make a sandwich before the order
@@ -341,37 +348,36 @@ Food Truck - Every five minutes:
 
 => How many sandwiches will you sell per five minute slot?
 
+    R = Min{D, Cap} = 1 (this is misleading)
+
 Variability will be a key factor in *waiting time*
 
-    Scenario  Demand  Capacity
-                                 
-     A         0       0
-     B         0       1
-     C         0       2
-                                 
-     D         1       0
-     E         1       1
-     F         1       2
-                                 
-     G         2       0
-     H         2       1
-     I         2       2
-   -------------------------- 
-    Avg        1       1
+| Scenario | D | Cap | R   | 
+|--------- | - | --- | --- | 
+|  A       | 0 | 0   | 0   | 
+|  B       | 0 | 1   | 0   | 
+|  C       | 0 | 2   | 0   | 
+| -------- | - | --  | --- | 
+|  D       | 1 | 0   | 0   | 
+|  E       | 1 | 1   | 1   | 
+|  F       | 1 | 2   | 1   | 
+| -------- | - | --  | --- | 
+|  G       | 2 | 0   | 0   | 
+|  H       | 2 | 1   | 1   | 
+|  I       | 2 | 2   | 2   | 
+| -------- | - | --  | --- | 
+| Avg      | 1 | 1   | 5/9 | 
 
-Why variability does not always average itself out
-
-Buffer-or-suffer strategy
+**Buffer or Suffer** := in a system where we cannot buffer inventory, flow rate
+will suffer
+- decouples supply from demand
+- By allowing for inventory, we can have a higher flow rate
 
 Buffering is easier in production settings than in services (make to order vs
 make to stock)
 - Preview two different models: Queue and Newsvendor
 
-### Difference Between Make-to-Order and Make-to-Stock
-
-### Make to Stock vs Make to Order / Reasons for Inventory
-
-McDonald's vs Subway
+### Difference Between Make-to-Order and Make-to-Stock - McDonald's vs Subway
 
 | McDonald’s (Make-to-Stock)             | Subway (Make-to-Order)          |   
 | -------------------------------------- | ------------------------------- |
@@ -382,14 +388,46 @@ McDonald's vs Subway
 
 Which approach is better? 
 
-Make-to-Stock advantages include:
+**Make-to-Stock** advantages include:
 - Scale economies in production
 - Rapid fulfillment (short flow time for customer order) 
 
-Make-to-Order advantages include:
+**Make-to-Order** advantages include:
 - Fresh preparation (flow time for the sandwich)
-- Allows for more customization (you can hold all versions of a sandwich in stock)
-- Produce exactly in the quantity demanded)
+- Allows for more customization - you can hold all versions of a sandwich in
+  stock
+- Produce exactly in the quantity demanded
+- longer flow time for customer order
+
+### Quiz
+
+Suppose a pizza resturant wants ot make pizzas to order. Which of the following
+actions would make their make-to-order system look a little more like a
+make-to-stock-system?
+- Reduce the time to make a pie so that customers do not wait as long
+- Standardize the size and saucing (white/red) of offered pizzas in order to
+  pre-make basic pies
+- Prohibit orders for multiple pies to reduce the variability of order size
+- none of the above
+
+### Five Reasons for Inventory
+
+**Pipeline inventory**: you will need some minimum inventory because of the flow time >0
+- direct result of little's law I = R * T
+- e.g. wine sales that need to be held for at least 2 years
+
+**Seasonal inventory**: driven by seasonal variation in demand and constant capacity
+- e.g. christmas sales spike
+
+**Cycle inventory**: economies of scale in production (purchasing drinks)
+- e.g. purchasing a 6-pack for home consumption instead of going to store for
+  each single bottle 
+
+**Safety inventory**: buffer against demand (Mc Donald’s hamburgers)
+- safety stock to ensure inventory never runs out
+
+**Decoupling inventory/ buffers**: buffers between several internal steps
+- e.g. don't want to run out of lettuce when making burgers
 
 ### Examples of Demand Waiting for Supply
 
@@ -407,17 +445,11 @@ Production Examples
 - Buying a Dell computer
   - => Make to-order vs Make-to-Stock
 
-### Five Reasons for Inventory
+### Summary
 
-*Pipeline inventory*: you will need some minimum inventory because of the flow time >0
+Inventory guides processes (supply and demand mismatches)
 
-*Seasonal inventory*: driven by seasonal variation in demand and constant capacity
-
-*Cycle inventory*: economies of scale in production (purchasing drinks)
-
-*Safety inventory*: buffer against demand (Mc Donald’s hamburgers)
-
-*Decoupling inventory/ buffers*: buffers between several internal steps
+make-to-stock looks fast to the customer but may be slow internally
 
 ## Multiple Flow Units
 
