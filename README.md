@@ -138,37 +138,78 @@ Allow to calculate flow rate without viewing process in action.
 
 We can now predict the flow rate
 
-## Labor Cost and Labor Utilization 
-
-
-![](images/02-15-labor-productivity-measures.png)
+## 02.03 Labor Cost and Labor Utilization 
 
 ### Review of Capacity Calculations
 
-*Capacity* = # Resources / Processing Time
+![](images/02-15-labor-productivity-measures.png)
 
-*Process Capacity* = Min{Capacity}
+*Capacity* = 
+    # Resources 
+    ---------------
+    Processing Time
 
-*Flow Rate* = Min{Demand, Capacity}
+*Process Capacity* = 
+    Min{Capacity}
 
-*Utiliziation* = Flow Rate / Capacity
+*Flow Rate* = 
+    Min{Demand, Capacity}
+
+*Utiliziation* = 
+    Flow Rate
+    ---------
+    Capacity
 
 ### Labor Productivity Measures
 
-*Cycle time CT* = 1/Flow Rate
+**Cycle time CT** = 
+       1
+    _________
+    Flow Rate
 
-*Direct Labor Content* = p1 + p2 + p3 + p4
+**Direct Labor Content** = 
+    p1 + p2 + p3 + p4 (total green in graph)
 
 If one worker per resource:
-*Direct Idle Time* = (CT-p1) + (CT-p2) + (CT-p3)
+**Direct Idle Time** = 
+    (CT-p1) + (CT-p2) + (CT-p3)
 
-*Average labor utilization* = labor content / (labor content + direct idle time)
+**Average labor utilization** = 
+              labor content 
+    ----------------------------------
+    (labor content + direct idle time)
 
-*Cost of direct labor* = (Total wages / time) / (Flow rate / time)
+**Cost of direct labor** = 
+    Total wages / time
+    ------------------
+    Flow rate   / time
 
 ### Example: Assembly Line with Six Stations
 
 ![](images/02-16-example-assembly-line-with-six-stations.png)
+
+
+| Station         | 1   | 2   | 3   | 4   | 5   | 6   |  Measure  |
+| --------------- | --- | --- | --- | --- | --- | --- | --------- |
+| Processing Time | 3   | 5   | 2   | 3   | 6   | 2   |  min/unit |
+| Capacity        | 0.3 | 1/5 | 1/2 | 1/3 | 1/6 | 1/2 |           |
+| Proc Capacity   | 1/6 |     |     |     |     |     |           |
+| Flow Rate       | 1/6 |     |     |     |     |     |           |
+| Cycle Time      | 6   |     |     |     |     |     |           |
+| Idle            | 3   | 1   | 4   | 3   | 0   | 4   |           |
+| Total Idle Time | 15  | 1   | 4   | 3   | 0   | 4   |           |
+| Labor content   | 21  |     |     |     |     |     |           |
+| labor utilization | 0.58333
+| Utilization     | 0.5 | 0.833 | 0.333 | 0.5 | 1 | 0.333 |
+| Avg Utilization | 0.583333 
+
+Assuming wages = $6/hr, Cost of Direct labor = (6 * 20) / 10 = $12/unit 
+
+### Quiz
+
+A process has four activities with processing times of 3, 2, 5, and 1 minutes per unit respectively. What is the direct labor content?
+
+### Example from automative company
 
 ![](images/02-18-role-of-labor-costs-in-manufacturing-auto-industry.png)
 
@@ -179,6 +220,12 @@ While labor costs appear small at first, they are important
 Implications
 - also hunt for pennies (e.g. line balancing)
 - spread operational excellence through the value chain
+
+### Summary
+
+2 measures: labor utilization vs labor cost 
+
+Firms can hide labor by relying on suppliers (i.e. outsourcing). e.g. Apple outsourcing to FoxCon. Looks good on Apple's books due to lower labor cost passed on to FoxCon.
 
 ## Little’s Law
 
