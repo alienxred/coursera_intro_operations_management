@@ -228,23 +228,32 @@ Implications
 
 Firms can hide labor by relying on suppliers (i.e. outsourcing). e.g. Apple outsourcing to FoxCon. Looks good on Apple's books due to lower labor cost passed on to FoxCon.
 
-## Little’s Law
+## 02.04 Little’s Law
+
+*Inventory* = Cumulative Inflow - Cumulative Outflow
+
+*Little's Law*: Inventory (I) = `Flow Rate (R) * Flow Time (T)`
 
 ![](images/02-20-three-key-metrics.png)
 
-Inventory = Cumulative Inflow - Cumulative Outflow
+**Flow Rate** = slope of the graph above on outflow
 
-*Little's Law*: Inventory (I) = Flow Rate (R) * Flow Time (T)
+Customers (I) = Cust/Time (R) * Time (T)
 
 Implications:
-- Out of the three fundamental performance measures (I,R,T), two can be chosen
-by management, the other is GIVEN by nature
+- Can only control for 2 of (I,R,T).
 - Hold throughput constant: Reducing inventory = reducing flow time
 
 Given two of the three measures, you can solve for the third:
-- Indirect measurement of flow time: how long does it take you on average to respond to an email?
+- Indirect measurement of flow time: how long does it take you on average to
+  respond to an email?
   - You write 60 email responses per day
   - You have 240 emails in your inbox
+
+    240 = 60 * T
+    T = 4 days 
+
+i.e. takes an average of 4 days to respond to an email
 
 ### Examples for Little's Law Appliations
 
@@ -254,11 +263,27 @@ In a large Philadelphia hospital, there are 10 births per day.
 
 What is the average occupancy of the department?
 
-### Little's law: Some remarks
+    R = 10 babies/day
+    T = 80% * 2 +  20$ * 5  = 2.6 days
 
-- Not an empirical law
+    I = R * T
+      =  10 babies/day * 2.6 days = 26 babies
+
+### Quiz
+
+In a pizaa restaurant, on average, customers order 30 pizzas an hour. A pizza
+needs to stay in the oven for 10 mintues. How many pizzas will there be, on
+average, in the oven?
+- 10
+- 30
+- 180
+- 5
+
+### Summary
+
+- Not an empirical law - requires heavy math to optimize
 - Robust to variation, what happens inside the black box
-- Deals with averages – variations around these averages will exist
+- Deals with **averages** – variations around these averages will exist
 - Holds for every time window
 - Shown by Professor Little in 1961
 
