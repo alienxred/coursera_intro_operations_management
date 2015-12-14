@@ -451,11 +451,64 @@ Inventory guides processes (supply and demand mismatches)
 
 make-to-stock looks fast to the customer but may be slow internally
 
-## Multiple Flow Units
+## 02.06 Multiple Flow Units
+
+### Processes with Multiple Flow Units
 
 ![](images/02-35-processes-multiple-flow.png)
-![](images/02-36-approach-1.png)
-![](images/02-37-approach-2.png)
+
+Finding the flow rate is more complex.
+
+Approach 1: Adding-up Demand Streams to calculate total flow
+
+| Resources | Capacity  | F Dem | Reg Dem | EZ Dem | Total | Dem/Cap |
+| --------- | --------- | ----- | ------- | ------ | ----- | ------- |
+| File      | 1/3       | 3     | 11      | 4      | 18    | 18/20
+| Foreign   | 6         | 3     |         |        | 3     | 3/6
+| D1        | 12        | 3     | 11      |        | 14    | 14/12 
+| D2        | 15        |       |         | 4      | 14    | 4/15
+| Print     | 30        | 3     | 11      | 4      | 18    | 18/30
+
+- D1 has highest implied utilization (14/12) i.e. **bottleneck**
+- Dem/Cap = **Implied Utilization**
+
+Approach 2: A Generic Flow Unit ("Minute of Work")
+
+| Resources | Min Avail | F Dem  | Reg Dem | EZ Dem | Total | Impl Util |
+| --------- | --------- | -----  | ------- | ------ | ----- | ------- |
+| File      | 60  mins  | 3 * 3  | 11 * 3  | 4 * 3  | 54 m  | 54/60
+| Foreign   | 120       | 3 * 20 |         |        | 3     | 60/120
+| D1        | 180       | 3 * 15 | 11 * 15 |        | 14    | 210/180 
+| D2        | 120       |        |         | 4 * 8  | 14    | 32/120
+| Print     | 60        | 3 * 2  | 11 * 2  | 4  * 2 | 18    | 36/60
+
+- For Demand, Use min/app in each step
+- Total = mins of work / hour
+- **Bottleneck** is the same (D1)
+
+**Note** Implied Utilization results are the same in both approaches
+
+2nd approach gives more flexibility
+
+### Processes with Attrition Loss
+
+Example of script reviews for TV season.
+
+![](images/02-39-processes-attrition-loss.png)
+
+Only 2 scripts make it to "New Series"
+
+Misleading to look at capacity to find the bottleneck (min{capacity, demand})
+
+Better way:
+1. Flow
+2. Cap
+3. Implied Utilization = flow / capacity (_unlike the previous example_)
+
+Other examples where bottleneck calculation is more complex:
+- underwriting
+- assembly process with quality issues
+
 
 ### Steps for Basic Process Analysis with Multiple Types of Flow Units
 
@@ -469,18 +522,15 @@ make-to-stock looks fast to the customer but may be slow internally
    workload of each resource across all flow units.  
 5. Compute the implied utilization of each resource as
 
-*Implied utilization* = Step 3 / Step 1
+                            Result of Step 3 
+    *Implied utilization =  ----------------
+                            Result of Step 1
 
 The resource with the highest implied utilization is the bottleneck
 
 Note: you can also find the bottleneck based on calculating capacity for each
 step and then dividing the demand at this resource by the capacity
 
-### Processes with Attrition Loss
-
-Where is the Bottleneck?
-
-![](images/02-39-processes-attrition-loss.png)
-
 ## Review of Process Analysis
+
 
