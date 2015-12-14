@@ -287,15 +287,49 @@ average, in the oven?
 - Holds for every time window
 - Shown by Professor Little in 1961
 
-## Inventory Turns / Inventory Costs
+## 02.05 Inventory Turns / Inventory Costs
+
+### Dell vs Compaq
+
+| Dell                           | Compaq                         |    
+| ------------------------------ | ------------------------------ | 
+| Inventory = $ 391 M            | Inventory = $ 2.003 M          | 
+| Cost of Goods = $20 B /yr      | Cost of Goods = $ 25.264 M /yr |
+| T = (391/20000) * 365 = 7 days | T = 365 * (2.003/25.263) = 29  |
+| Inv Turns = 1/T = 51           | Inv Turns = 1/T = 12           | 
+
+Make sure to use **COGS** in this calculation and not revenue
+
+**Inventory Turns** = `COGS / Inventory`
 
 ![](images/02-26-inventory-turns-at-dell.png)
+
+Started with low inventory turn. In the 90s, optimized significantly.
+
+2001 was the tech bubble.
+
+More recent due to change in the business model incl. new manufacting e.g. TVs
+etc.
 
 ### Inventory Turns in Retailing and Its Link to Inventory Costs
 
 ![](images/02-27-inventory-turns-in-retailing.png)
 
-*Per Unit Inventory costs* = Annual inventory costs / Inventory turns
+**Per Unit Inventory costs** = 
+
+    Annual inventory costs 
+    ----------------------
+      Inventory turns
+
+Annual inventory costs = cost to warehouse an item
+
+Retailer A: per unit Inv Cost = 30% / 4 = 7.5%
+
+Retailer B: per unit Inv Cost = 30% / 8 = 3.75%
+
+Retailer B has dramatic competitive advantage just in per unit inventory cost.
+
+Powerful metric to measure how well you're using inventory capital.
 
 ### Buffer or Suffer
 
