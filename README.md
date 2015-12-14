@@ -152,7 +152,7 @@ We can now predict the flow rate
 
 **Process Capacity** = ``Min{Capacity}``
 
-**Flow Rate* = `Min{Demand, Capacity}`
+**Flow Rate** = `Min{Demand, Capacity}`
 
 **Utiliziation** = 
 
@@ -163,23 +163,24 @@ We can now predict the flow rate
 ### Labor Productivity Measures
 
 **Cycle time CT** = 
+
        1
     _________
     Flow Rate
 
-**Direct Labor Content** = 
-    p1 + p2 + p3 + p4 (total green in graph)
+**Direct Labor Content** = `p1 + p2 + p3 + p4` (total green in graph)
 
 If one worker per resource:
-**Direct Idle Time** = 
-    (CT-p1) + (CT-p2) + (CT-p3)
+**Direct Idle Time** = `(CT-p1) + (CT-p2) + (CT-p3)`
 
 **Average labor utilization** = 
+
               labor content 
     ----------------------------------
     (labor content + direct idle time)
 
 **Cost of direct labor** = 
+
     Total wages / time
     ------------------
     Flow rate   / time
