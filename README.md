@@ -144,18 +144,18 @@ We can now predict the flow rate
 
 ![](images/02-15-labor-productivity-measures.png)
 
-*Capacity* = 
+**Capacity** = 
+
     # Resources 
     ---------------
     Processing Time
 
-*Process Capacity* = 
-    Min{Capacity}
+**Process Capacity** = ``Min{Capacity}``
 
-*Flow Rate* = 
-    Min{Demand, Capacity}
+**Flow Rate* = `Min{Demand, Capacity}`
 
-*Utiliziation* = 
+**Utiliziation** = 
+
     Flow Rate
     ---------
     Capacity
