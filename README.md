@@ -289,6 +289,8 @@ average, in the oven?
 
 ## 02.05 Inventory Turns / Inventory Costs
 
+**REDO THIS: Doesn't make sense**
+
 ### Dell vs Compaq
 
 | Dell                           | Compaq                         |    
@@ -533,4 +535,474 @@ step and then dividing the demand at this resource by the capacity
 
 ## Review of Process Analysis
 
+### Unfusion US
 
+Infusion US is a startup that offers powerful and energiing infusions in a
+non-hospital setting for competitive athletes (just electrolytes, no doping!).
+The service process includes five activities that are conductind in the
+sequence described below. (The time requried for each activity is shown in
+parantheses): 
+- Activity 1: (7 mins) Welcome a patient and explan the procedure 
+- Activity 2: (13 mins) Take vitals, insert IV, and take blood
+- Activity 3: (12 mins) Mix infusion treatment
+- Activity 4: (30 mins) Chemo infusion
+- Activity 5: (5 mins) Debrief the patient
+
+Three nurses (S1, S2, S3) offer the services in a worker-paced line. The
+assignment of activities to nurses is the following:
+- S1 does Activitiy 1 and Activity 2
+- S2 does Activitiy 3
+- S3 does Activitiy 4 and Activity 5
+Assume that there exists unlimited demand and that the process only admits patients at the rate of the bottleneck.
+
+**IU1** Which nurse is the bottlneck of the process?
+
+Capacity:
+- S1 = 1/20
+- S2 = 1/12
+- S3 = 1/35
+
+Bottleneck = S3 (lowest capacity)
+
+**IU2** What is the process utilization (ie the utilization of the bottleneck resource)?
+
+S3 Process Utilization = 100%
+
+**IU3** What is the utilization of nurse 2?
+
+U = FR / Cap = (1/35) / (1/12) = 12/35
+
+**IU4** What is the cycle time (in minutes)?
+
+CT = 1 / FR = 1 / (1/35) = 35 mins/customer
+
+**IU5** What is the idle time per unit at nurse 1 (in minutes)?
+
+IT = CT - p1 = 35 - 20 = 15 mins 
+
+**IU6** What is the average labor utilization across all three nurses?
+
+LU = (20 + 12 + 35)  / ( (20 + 12 + 35) + (15 + 23) ) = 67 / 105
+
+**IU7** What are the costs of direct labor associated with serving one patient?
+- assume a wage rate of $30 per hour for Nurses 1 and 2 and $60 for nurse 3
+- assume workers are paid regardless of whether they are busy or idle
+
+Cost DL = = $120/hr / [ (1/35 cust/hr) * (60 mins/hr) ] = $70/customer 
+
+### Ruhpolding
+
+Ruhpolding is a village in the German Alps. Given its enormous populatiry among
+the Swiss, German, Austrian, and Italian skiers, all of its beds are always
+booked in the winter season and there are 1200 beds in the village. On average,
+skiers stay in Ruhpolding for 10 days.
+
+
+**Qn 1.** How many new skiers are arriving on average in Ruhpolding every day? 
+
+I = R * T 
+
+I = 1200 skiers
+
+T = 10 days
+
+R = I / T = 120 skiers/day
+
+**Qn 2.** A study done by the largets hoetle in the village has shown that
+skiers spend on average $50 per person on the first day and $30 each additional
+day in local restaurants. The study also forecasts that the average length of
+stay for the 2010/2011 season will be reduced to five days. What will be the
+impact on revenues of local restaurants compared to last year (when skiers sill
+stayed for 10 days)? Assume that hotles continue to be fully booked! Express
+your answers in $'s per day.
+
+10 day R = 120 skiers/day
+
+10 day Revenue = 120 * 50 + 1080 * 30 = $38400 / day
+
+5 day R = 1200 / 5 = 240
+
+5 day revenue = 240 * 50 + 960 * 30 = $40800 / day
+
+Diff = 40800 - 38400  = $2400 / day
+
+###  Summer's Sweets
+
+Summer's Sweets is a small chain of gelato stores in E. North Carolina. In 2009
+the company's revenue was $4.3M and its cost of sales was $2.6M. Assume 52
+weeks and 365 days per year.
+
+**SS1** Summer keeps only 4.5 days of supply of inventory on avg b'se much of
+her inventory is gelato and fresh squeezed orange juice, both of which have a
+short shelf life. What is his annual inventory turns?
+
+Flow Time (T) = 4.5 days
+
+Turns = 1 / T = 1 / 4.5 days * 365 days/yr = 81.4 (yearly) 
+
+i.e. turning over inventory 81.4 times per year
+
+**SS2** Given that he has 4.5 days of supply of inventory on average, how much
+inventory does summer have on average (in $s)?
+
+T = I/COGS * 365
+
+4.5 = I / 2.6M * 365
+
+I = (4.5 / 365) * 2.6M = $32054
+
+### Dept of Motor Vehicles
+
+To obtain your first drivers license you must successfully ocmplete several
+activities. First you must produce the appropriate identification. Then you
+must pass a written exam. Finally you must pass the road exam. At each of these
+steps 1%, 15%, 30% of drivers license hopefuls fail to fulfill the step's
+requirements. You are only allowed to take the written exam if your
+identification is approved and you are only allowed to take the road test if
+you have passed the written exam.
+
+The average daily number of driver's license applicants is 400 people. Each
+step takes 5, 3, and 20 minutes. Currently the DMV staffs 4 people to process
+license applications, 2 to administer written exams, and 15 to judge the road
+exam. DMV staff work 8 hours per day
+
+**DMV1** How many liense applications would the DMV process each day if it had
+unlimited capacity?
+
+F1 (Id) = 400 * 99% = 396
+
+F2 (exam) = 396 * 85% = 336.6
+
+F3 (road) = 336.6 * 70% = 235.62
+
+**DMV2** Which stage is the bottleneck according to the current staffing plan?
+
+Capacity: (480 mins in 8 hours)
+- C1 = 480 * 4 / 5 = 384
+- C2 = 480 * 2 / 3 = 320
+- C3 = 480 * 15 / 20 = 360
+
+Demand:
+- D1 = 400 
+- D2 = 396 
+- D3 = 336.6 
+
+Implied Utilization:
+- U1 = 400 / 384 = 1.04
+- U1 = 396 / 320 = 1.23
+- U1 = 360 / 336.6 = 0.935
+
+Bottleneck = Station 2
+
+i.e. system can only handle 320 applicants a day
+
+**DMV3** with the current staffing plan, how many newly licensed drivers will
+the DMV turn out each day?
+
+85% * 320 * 70% = 190.4 people get their license
+
+## Homework
+
+Close
+Homework Assignment: Module 2 - Process Analysis
+
+10 questions
+
+1. 
+Posh Nails
+
+Katie Posh runs an upscale nail salon. The service process includes five activities that are conducted in the sequence described below. (The time required for each activity is shown in parentheses):
+
+Activity 1: Welcome a guest. (1 minute)
+Activity 2: Clip and file nails. (3 minutes)
+Activity 3: Paint. (5 minutes)
+Activity 4: Dry. (10 minutes)
+Activity 5: Check out the customer. (4 minutes)
+Three servers (S1, S2, and S3) offer the services in a worker-paced line. The assignment of tasks to servers is the following: S1 does Activity 1. S2 does Activities 2 and 3. S3 does Activities 4 and 5. The drying process does not require server 3’s constant attention; she/he needs to only escort the customer to the salon’s drying chair (equipped with fans for drying). The time to do this is negligible. There exists only one drying chair in the salon.
+
+Which resource is the bottleneck of the process?
+
+S2
+
+Dryer chair
+
+S3
+
+S1
+2. 
+Posh Nails
+
+Katie Posh runs an upscale nail salon. The service process includes five activities that are conducted in the sequence described below. (The time required for each activity is shown in parentheses):
+
+Activity 1: Welcome a guest. (1 minute)
+Activity 2: Clip and file nails. (3 minutes)
+Activity 3: Paint. (5 minutes)
+Activity 4: Dry. (10 minutes)
+Activity 5: Check out the customer. (4 minutes)
+Three servers (S1, S2, and S3) offer the services in a worker-paced line. The assignment of tasks to servers is the following: S1 does Activity 1. S2 does Activities 2 and 3. S3 does Activities 4 and 5. The drying process does not require server 3’s constant attention; she/he needs to only escort the customer to the salon’s drying chair (equipped with fans for drying). The time to do this is negligible. There exists only one drying chair in the salon.
+
+What is the utilization of server 2 (in decimal form)? Assume that there is unlimited demand and that the process only admits customers at the rate of the bottleneck.
+
+Enter answer here
+3. 
+Posh Nails
+
+Katie Posh runs an upscale nail salon. The service process includes five activities that are conducted in the sequence described below. (The time required for each activity is shown in parentheses):
+
+Activity 1: Welcome a guest. (1 minute)
+Activity 2: Clip and file nails. (3 minutes)
+Activity 3: Paint. (5 minutes)
+Activity 4: Dry. (10 minutes)
+Activity 5: Check out the customer. (4 minutes)
+Three servers (S1, S2, and S3) offer the services in a worker-paced line. The assignment of tasks to servers is the following: S1 does Activity 1. S2 does Activities 2 and 3. S3 does Activities 4 and 5. The drying process does not require server 3’s constant attention; she/he needs to only escort the customer to the salon’s drying chair (equipped with fans for drying). The time to do this is negligible. There exists only one drying chair in the salon.
+
+What is the average labor utilization of the servers (in decimal form)? Assume that there is unlimited demand and that the process only admits customers at the rate of the bottleneck.
+
+Enter answer here
+4. 
+Posh Nails
+
+Katie Posh runs an upscale nail salon. The service process includes five activities that are conducted in the sequence described below. (The time required for each activity is shown in parentheses):
+
+Activity 1: Welcome a guest. (1 minute)
+Activity 2: Clip and file nails. (3 minutes)
+Activity 3: Paint. (5 minutes)
+Activity 4: Dry. (10 minutes)
+Activity 5: Check out the customer. (4 minutes)
+Three servers (S1, S2, and S3) offer the services in a worker-paced line. The assignment of tasks to servers is the following: S1 does Activity 1. S2 does Activities 2 and 3. S3 does Activities 4 and 5. The drying process does not require server 3’s constant attention; she/he needs to only escort the customer to the salon’s drying chair (equipped with fans for drying). The time to do this is negligible. There exists only one drying chair in the salon.
+
+Assume a wage rate of $12 per hour. What are the direct labor costs for one customer (in dollars)?
+
+Enter answer here
+5. 
+BN1. Butternut is a ski resort in Massachusetts. One of their triple chair lifts unloads 1296 skiers per hour at the top of the slope. (A triple chair lift can carry three passengers per chair. Note that each lift contains multiple chairs.) The ride from the bottom to the top takes 5 minutes. On average, how many skiers are riding on the lift at any one time?
+
+Enter answer here
+6. 
+Tech Company is a medium-sized consumer electronics retailer. The company reported $155,000,000 in revenues for 2007 and $110,050,000 in Costs of Goods Sold (COGS). In the same year, Tech Co. held an average of $20,000,000 in inventory.
+
+How many times did Tech Co. turn its inventory in 2007?
+
+Enter answer here
+7. 
+Tech Company is a medium-sized consumer electronics retailer. The company reported $155,000,000 in revenues for 2007 and $110,050,000 in Costs of Goods Sold (COGS). In the same year, Tech Co. held an average of $20,000,000 in inventory.
+
+Inventory cost at Tech Co. is 35 percent per year. What is the per unit inventory cost (in dollars) for an MP3 player sold at $50? Assume that the margin corresponds to the retailer’s average margin.
+
+Enter answer here
+8. 
+The Gamer Company is a video game production company that specializes in educational video games for kids. The company’s R&D department is always looking for great ideas for new games. On average, the R&D department generates about 25 new ideas a week. To go from idea to approved product, the idea must pass through the following stages: paper screening (a 1-page document describing the idea and giving a rough sketch of the design), prototype development, testing, and a focus group. At the end of each stage, successful ideas enter the next stage. All other ideas are dropped. The following chart depicts this process, and the probability of succeeding at each stage.
+
+
+The paper screening for each idea takes 2 hours of a staff member’s time. After that, there is a stage of designing and producing a prototype. A designer spends 4 hours designing the game in a computer-aided-design (CAD) package. The actual creation of the mock-up is outsourced to one of many suppliers with essentially limitless capacity. It takes 4 days to get the prototype programmed, and multiple prototypes can be created simultaneously. A staff member of the testing team needs 2 days to test an idea. Running the focus group takes 2 hours of a staff member’s time per idea, and only one game is tested in each focus group. Finally, the management team meets for 3 hours per idea to decide if the game should go into production.
+
+Available working hours for each staff member are 8 hours per day, 5 days a week. The current staffing plan is as follows:
+
+A. Paper screening: 3 staff members.
+
+B. Design and Production: 4 staff members.
+
+C. Testing: 6 staff members.
+
+D. Focus Group: 1 staff member.
+
+E. Final Decision: 1 management team
+
+How many new ideas would Gamer Co. approve for production per week if it had unlimited capacity (staff) in its R&D process?
+
+Enter answer here
+9. 
+The Gamer Company is a video game production company that specializes in educational video games for kids. The company’s R&D department is always looking for great ideas for new games. On average, the R&D department generates about 25 new ideas a week. To go from idea to approved product, the idea must pass through the following stages: paper screening (a 1-page document describing the idea and giving a rough sketch of the design), prototype development, testing, and a focus group. At the end of each stage, successful ideas enter the next stage. All other ideas are dropped. The following chart depicts this process, and the probability of succeeding at each stage.
+
+
+The paper screening for each idea takes 2 hours of a staff member’s time. After that, there is a stage of designing and producing a prototype. A designer spends 4 hours designing the game in a computer-aided-design (CAD) package. The actual creation of the mock-up is outsourced to one of many suppliers with essentially limitless capacity. It takes 4 days to get the prototype programmed, and multiple prototypes can be created simultaneously. A staff member of the testing team needs 2 days to test an idea. Running the focus group takes 2 hours of a staff member’s time per idea, and only one game is tested in each focus group. Finally, the management team meets for 3 hours per idea to decide if the game should go into production.
+
+Available working hours for each staff member are 8 hours per day, 5 days a week. The current staffing plan is as follows:
+
+A. Paper screening: 3 staff members.
+
+B. Design and Production: 4 staff members.
+
+C. Testing: 6 staff members.
+
+D. Focus Group: 1 staff member.
+
+E. Final Decision: 1 management team
+
+Which stage is the bottleneck according to the current staffing plan?
+
+Focus group
+
+Final decision
+
+Design and production
+
+Testing
+
+Paper screening
+10. 
+The Gamer Company is a video game production company that specializes in educational video games for kids. The company’s R&D department is always looking for great ideas for new games. On average, the R&D department generates about 25 new ideas a week. To go from idea to approved product, the idea must pass through the following stages: paper screening (a 1-page document describing the idea and giving a rough sketch of the design), prototype development, testing, and a focus group. At the end of each stage, successful ideas enter the next stage. All other ideas are dropped. The following chart depicts this process, and the probability of succeeding at each stage.
+
+
+The paper screening for each idea takes 2 hours of a staff member’s time. After that, there is a stage of designing and producing a prototype. A designer spends 4 hours designing the game in a computer-aided-design (CAD) package. The actual creation of the mock-up is outsourced to one of many suppliers with essentially limitless capacity. It takes 4 days to get the prototype programmed, and multiple prototypes can be created simultaneously. A staff member of the testing team needs 2 days to test an idea. Running the focus group takes 2 hours of a staff member’s time per idea, and only one game is tested in each focus group. Finally, the management team meets for 3 hours per idea to decide if the game should go into production.
+
+Available working hours for each staff member are 8 hours per day, 5 days a week. The current staffing plan is as follows:
+
+A. Paper screening: 3 staff members.
+
+B. Design and Production: 4 staff members.
+
+C. Testing: 6 staff members.
+
+D. Focus Group: 1 staff member.
+
+E. Final Decision: 1 management team
+
+With the current staffing plan, how many new ideas will be put into production per week?
+
+Enter answer here
+9 questions unanswered
+Submit Quiz
+
+
+Close
+Homework Assignment: Module 2 - Process Analysis
+
+10 questions
+1. 
+Posh Nails
+
+Katie Posh runs an upscale nail salon. The service process includes five activities that are conducted in the sequence described below. (The time required for each activity is shown in parentheses):
+
+Activity 1: Welcome a guest. (1 minute)
+Activity 2: Clip and file nails. (3 minutes)
+Activity 3: Paint. (5 minutes)
+Activity 4: Dry. (10 minutes)
+Activity 5: Check out the customer. (4 minutes)
+Three servers (S1, S2, and S3) offer the services in a worker-paced line. The assignment of tasks to servers is the following: S1 does Activity 1. S2 does Activities 2 and 3. S3 does Activities 4 and 5. The drying process does not require server 3’s constant attention; she/he needs to only escort the customer to the salon’s drying chair (equipped with fans for drying). The time to do this is negligible. There exists only one drying chair in the salon.
+
+Which resource is the bottleneck of the process?
+
+S2
+
+Dryer chair
+
+S3
+
+S1
+2. 
+Posh Nails
+
+Katie Posh runs an upscale nail salon. The service process includes five activities that are conducted in the sequence described below. (The time required for each activity is shown in parentheses):
+
+Activity 1: Welcome a guest. (1 minute)
+Activity 2: Clip and file nails. (3 minutes)
+Activity 3: Paint. (5 minutes)
+Activity 4: Dry. (10 minutes)
+Activity 5: Check out the customer. (4 minutes)
+Three servers (S1, S2, and S3) offer the services in a worker-paced line. The assignment of tasks to servers is the following: S1 does Activity 1. S2 does Activities 2 and 3. S3 does Activities 4 and 5. The drying process does not require server 3’s constant attention; she/he needs to only escort the customer to the salon’s drying chair (equipped with fans for drying). The time to do this is negligible. There exists only one drying chair in the salon.
+
+What is the utilization of server 2 (in decimal form)? Assume that there is unlimited demand and that the process only admits customers at the rate of the bottleneck.
+
+Enter answer here
+3. 
+Posh Nails
+
+Katie Posh runs an upscale nail salon. The service process includes five activities that are conducted in the sequence described below. (The time required for each activity is shown in parentheses):
+
+Activity 1: Welcome a guest. (1 minute)
+Activity 2: Clip and file nails. (3 minutes)
+Activity 3: Paint. (5 minutes)
+Activity 4: Dry. (10 minutes)
+Activity 5: Check out the customer. (4 minutes)
+Three servers (S1, S2, and S3) offer the services in a worker-paced line. The assignment of tasks to servers is the following: S1 does Activity 1. S2 does Activities 2 and 3. S3 does Activities 4 and 5. The drying process does not require server 3’s constant attention; she/he needs to only escort the customer to the salon’s drying chair (equipped with fans for drying). The time to do this is negligible. There exists only one drying chair in the salon.
+
+What is the average labor utilization of the servers (in decimal form)? Assume that there is unlimited demand and that the process only admits customers at the rate of the bottleneck.
+
+Enter answer here
+4. 
+Posh Nails
+
+Katie Posh runs an upscale nail salon. The service process includes five activities that are conducted in the sequence described below. (The time required for each activity is shown in parentheses):
+
+Activity 1: Welcome a guest. (1 minute)
+Activity 2: Clip and file nails. (3 minutes)
+Activity 3: Paint. (5 minutes)
+Activity 4: Dry. (10 minutes)
+Activity 5: Check out the customer. (4 minutes)
+Three servers (S1, S2, and S3) offer the services in a worker-paced line. The assignment of tasks to servers is the following: S1 does Activity 1. S2 does Activities 2 and 3. S3 does Activities 4 and 5. The drying process does not require server 3’s constant attention; she/he needs to only escort the customer to the salon’s drying chair (equipped with fans for drying). The time to do this is negligible. There exists only one drying chair in the salon.
+
+Assume a wage rate of $12 per hour. What are the direct labor costs for one customer (in dollars)?
+
+Enter answer here
+5. 
+BN1. Butternut is a ski resort in Massachusetts. One of their triple chair lifts unloads 1296 skiers per hour at the top of the slope. (A triple chair lift can carry three passengers per chair. Note that each lift contains multiple chairs.) The ride from the bottom to the top takes 5 minutes. On average, how many skiers are riding on the lift at any one time?
+
+Enter answer here
+6. 
+Tech Company is a medium-sized consumer electronics retailer. The company reported $155,000,000 in revenues for 2007 and $110,050,000 in Costs of Goods Sold (COGS). In the same year, Tech Co. held an average of $20,000,000 in inventory.
+
+How many times did Tech Co. turn its inventory in 2007?
+
+Enter answer here
+7. 
+Tech Company is a medium-sized consumer electronics retailer. The company reported $155,000,000 in revenues for 2007 and $110,050,000 in Costs of Goods Sold (COGS). In the same year, Tech Co. held an average of $20,000,000 in inventory.
+
+Inventory cost at Tech Co. is 35 percent per year. What is the per unit inventory cost (in dollars) for an MP3 player sold at $50? Assume that the margin corresponds to the retailer’s average margin.
+
+Enter answer here
+8. 
+The Gamer Company is a video game production company that specializes in educational video games for kids. The company’s R&D department is always looking for great ideas for new games. On average, the R&D department generates about 25 new ideas a week. To go from idea to approved product, the idea must pass through the following stages: paper screening (a 1-page document describing the idea and giving a rough sketch of the design), prototype development, testing, and a focus group. At the end of each stage, successful ideas enter the next stage. All other ideas are dropped. The following chart depicts this process, and the probability of succeeding at each stage.
+
+
+The paper screening for each idea takes 2 hours of a staff member’s time. After that, there is a stage of designing and producing a prototype. A designer spends 4 hours designing the game in a computer-aided-design (CAD) package. The actual creation of the mock-up is outsourced to one of many suppliers with essentially limitless capacity. It takes 4 days to get the prototype programmed, and multiple prototypes can be created simultaneously. A staff member of the testing team needs 2 days to test an idea. Running the focus group takes 2 hours of a staff member’s time per idea, and only one game is tested in each focus group. Finally, the management team meets for 3 hours per idea to decide if the game should go into production.
+
+Available working hours for each staff member are 8 hours per day, 5 days a week. The current staffing plan is as follows:
+
+A. Paper screening: 3 staff members.
+
+B. Design and Production: 4 staff members.
+
+C. Testing: 6 staff members.
+
+D. Focus Group: 1 staff member.
+
+E. Final Decision: 1 management team
+
+How many new ideas would Gamer Co. approve for production per week if it had unlimited capacity (staff) in its R&D process?
+
+Enter answer here
+9. 
+The Gamer Company is a video game production company that specializes in educational video games for kids. The company’s R&D department is always looking for great ideas for new games. On average, the R&D department generates about 25 new ideas a week. To go from idea to approved product, the idea must pass through the following stages: paper screening (a 1-page document describing the idea and giving a rough sketch of the design), prototype development, testing, and a focus group. At the end of each stage, successful ideas enter the next stage. All other ideas are dropped. The following chart depicts this process, and the probability of succeeding at each stage.
+
+
+The paper screening for each idea takes 2 hours of a staff member’s time. After that, there is a stage of designing and producing a prototype. A designer spends 4 hours designing the game in a computer-aided-design (CAD) package. The actual creation of the mock-up is outsourced to one of many suppliers with essentially limitless capacity. It takes 4 days to get the prototype programmed, and multiple prototypes can be created simultaneously. A staff member of the testing team needs 2 days to test an idea. Running the focus group takes 2 hours of a staff member’s time per idea, and only one game is tested in each focus group. Finally, the management team meets for 3 hours per idea to decide if the game should go into production.
+
+Available working hours for each staff member are 8 hours per day, 5 days a week. The current staffing plan is as follows:
+
+A. Paper screening: 3 staff members.
+
+B. Design and Production: 4 staff members.
+
+C. Testing: 6 staff members.
+
+D. Focus Group: 1 staff member.
+
+E. Final Decision: 1 management team
+
+Which stage is the bottleneck according to the current staffing plan?
+
+Focus group
+
+Final decision
+
+Design and production
+
+Testing
+
+Paper screening
+10. 
+The Gamer Company is a video game production company that specializes in educational video games for kids. The company’s R&D department is always looking for great ideas for new games. On average, the R&D department generates about 25 new ideas a week. To go from idea to approved product, the idea must pass through the following stages: paper screening (a 1-page document describing the idea and giving a rough sketch of the design), prototype development, testing, and a focus group. At the end of each stage, successful ideas enter the next stage. All other ideas are dropped. The following chart depicts this process, and the probability of succeeding at each stage.
+
+
+The paper screening for each idea takes 2 hours of a staff member’s time. After that, there is a stage of designing and producing a prototype. A designer spends 4 hours designing the game in a computer-aided-design ()

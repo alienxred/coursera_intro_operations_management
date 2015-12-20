@@ -1,0 +1,71 @@
+# 1
+
+D = 1/60 = 0.01666
+
+# x 2 
+
+Process capacity = Min(Capacity) = 0.01666666667
+
+# 3
+
+direct labor cost 
+
+    = Total wages / Flow Rate
+    = $25/hr * 6 / (1/60) *3600
+    = 2.5
+
+# 4
+
+labor utilization = 
+
+    labor content = 289
+    idle time = 71
+
+    utilization = 289 / (289 + 71) = 0.8027777778
+
+# 5
+
+oven size
+  
+    12 min / bread
+
+    5 bread / hr
+
+    4000 / 5 = 800
+
+# x 6
+
+    T = 365 * (COGS / I) 
+      = 53962 / 5743 = 9.396
+
+# x 7
+
+    Wally Mart T = 365 * (316606 / 40694) = 7.780
+
+    holding cost rate = 20%
+
+    good = $50
+
+    holding cost = $10
+
+    Save-A-Lot = 93.96
+    Wally Mart = 77.80
+
+    Diff = 93.96 - 77.80 = 16.6
+
+ 
+**No fucking clue**
+
+# 8
+
+Jr is bottleneck
+
+# x 9
+
+**No fucking clue**
+
+
+
+
+                     
+
