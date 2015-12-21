@@ -1,5 +1,57 @@
 # 02 Process Analysis
 
+## Summary
+
+**Capacity** = # Resources / Procesing Time 
+
+        #R
+    C = --
+        PT
+
+**Processing Capacity** = Min{Capacity}
+
+    PC = Min{C}
+
+**Flow Rate** = Min{Demand, Capacity}
+
+    R = Min{D, C}
+
+**Utilization** = Flow Rate / Capacity
+
+         R
+    U = --- 
+         C
+
+**Cycle Time** = 1 / Flow Rate
+
+          1
+    CT = ---
+          R
+
+
+**Direct Labor Content** = `p1 + p2 + p3 + p4` (total green in graph)
+
+    LC = p1 + p2 + p3 + p4  where p(n) = processing time
+
+If one worker per resource:
+**Direct Idle Time** = `(CT-p1) + (CT-p2) + (CT-p3)`
+
+    IT = (CT-p1) + (CT-p2) + (CT-p3)
+
+**Average labor utilization** = labor content / (labor content + direct idle time)
+
+         LC
+  LU = -------
+       LC + IT
+
+**Cost of direct labor** = 
+
+           Total wages / time
+    Cost = ------------------
+           Flow rate   / time
+
+## Intro
+
 In this module, you'll learn how to identify key elements of process analysis:
 *flow rates (throughput)*, and *flow times*, how to uncover bottlenecks, how to
 optimize labor and *inventory*, and how to handle the complexities of multiple
@@ -84,6 +136,10 @@ Inventory happens whenever there is a mismatch between supply and demand
 - e.g. Station 2 = 46 secs/customer
 - same as **activity times**
 
+                        Time 
+    Processing Time = ---------
+                      Flow Unit
+
 Image above
 - need 3 workers
 - understand activities to make a sandwich
@@ -99,17 +155,28 @@ Image above
 
 ### Basic Process Vocabulary
 
-- **Processing times**: how long does the worker spend on the task?
-  - i.e. 46 secs/cust * 3600 sec/hour = 78 customers / hour
-- **Capacity** = 1/processing time: how many units can the worker make per unit
-  of time
-  - If there are m workers at the activity: Capacity=m/activity time
-- **Bottleneck**: process step with the _lowest capacity_
-- **Process capacity**: capacity of the bottleneck
-- **Flow rate** = Minimum{Demand rate, Process Capacity)
-- **Utilization** = Flow Rate / Capacity
-- **Flow Time**: The amount of time it takes a flow unit to go through the process
-- **Inventory**: The number of flow units in the system
+**Processing times**: how long does the worker spend on the task?
+- i.e. 46 secs/cust * 3600 sec/hour = 78 customers / hour
+
+**Capacity** = 1/processing time: how many units can the worker make per unit
+of time
+- If there are m workers at the activity: Capacity=m/activity time
+
+                   1 
+   Capacity = ---------------
+              Processing Time
+
+**Bottleneck**: process step with the _lowest capacity_
+
+**Process capacity**: capacity of the bottleneck
+
+**Flow rate** = Minimum{Demand rate, Process Capacity)
+
+**Utilization** = Flow Rate / Capacity
+
+**Flow Time**: The amount of time it takes a flow unit to go through the process
+
+**Inventory**: The number of flow units in the system
 
 ### Example spreadsheet for Subway example above 
 
@@ -146,13 +213,17 @@ We can now predict the flow rate
 
 **Capacity** = 
 
-    # Resources 
+      # Resources 
     ---------------
     Processing Time
 
-**Process Capacity** = ``Min{Capacity}``
+**Process Capacity** = 
 
-**Flow Rate** = `Min{Demand, Capacity}`
+    Min{Capacity}
+
+**Flow Rate** = 
+
+    Min{Demand, Capacity}
 
 **Utiliziation** = 
 
@@ -228,7 +299,7 @@ Implications
 
 Firms can hide labor by relying on suppliers (i.e. outsourcing). e.g. Apple outsourcing to FoxCon. Looks good on Apple's books due to lower labor cost passed on to FoxCon.
 
-## 02.04 Little’s Law
+## 02.04 Little's Law
 
 *Inventory* = Cumulative Inflow - Cumulative Outflow
 

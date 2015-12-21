@@ -1,0 +1,167 @@
+Module 2 – Practice Questions
+
+# Atlas Inc
+
+Atlas Inc. is a toy bicycle manufacturing company producing a five - inch small
+version of the bike that Lance Armstrong rode to win his first Tour de France.
+The assembly line at Atlas Inc. consists of seven work stations, each
+performing a single step. Stations and processing times are summarized here:
+- Step 1 (30 sec.): The plastic tube for the frame is cut to size.
+- Step 2 (20 sec.): The tube is put together.
+- Step 3 (35 sec.): The frame is glued together.
+- Step 4 (25 sec.): The frame is cleaned.
+- Step 5 (30 sec.): Paint is sprayed onto the frame.
+- Step 6 (45 sec.): Wheels are assembled.
+- Step 7 (40 sec.): All other parts are assembled to the frame.
+
+Under the current process layout, workers are allocated to the stations as
+shown here:
+- Worker 1: Steps 1, 2
+- Worker 2: Steps 3, 4
+- Worker 3: Step 5
+- Worker 4: Step 6
+- Worker 5: Step 7
+
+## AI1 What is the bottleneck in this process?
+
+Capacity = 1/T
+
+Capacity W1 = 1 / (30 + 20)  = 1/50
+Capacity W2 = 1 / (35 + 25)  = 1/60
+Capacity W3 = 1 / (30)       = 1/30
+Capacity W4 = 1 / (45)       = 1/45
+Capacity W5 = 1 / (40)       = 1/40
+
+ANS: bottleneck = W2
+
+## AI2 What is the capacity of this assembly line, in finished units/hour?
+
+Proc. Capacity =  Min{Capacity}
+
+W2 has smallest capacity = 1 unit / 60 secs
+
+Capacity W2 = (1 unit)/(60 secs) = 1/60 * 3600s/hr = 3600/60 = 60 units/hr
+
+ANS: 60 units/hr
+
+## AI3 What is the utilization of Worker 4, ignoring the production of the first and last units?
+
+U = R / C
+
+R = 1 unit/min
+
+Capacity W4 = (1/60) / (1/45) = 0.75 
+
+## AI4 What is the average labor utilization of the workers, ignoring the production of the first and last units?
+
+LU = LC / (LC + IT)
+
+LC = 50 + 60 + 30 + 45 + 40 = 225 secs
+
+IT = (60-50) + (60-60) +  (60-30) +  (60-45) +  (60-40)     
+-  = 10 + 0 + 30 + 15 + 20 = 75
+
+LU = 225 / (225 + 75)
+-  = 0.75
+
+## AI5 Assume the workers are paid $15 per hour. What is the cost of direct labor for the bicycle?
+
+Cost = wages/time / flowrate/time
+
+Cost 
+- = [ ($15 * 5) / hr ]  / [ 1 unit/min / 60 mins/hr]
+- = ($75/hr) / (1/60 unit/hr)
+- = $1.25 per unit
+
+# Airline Check-in
+
+## AC1 
+
+Consider the baggage check-in of a small airline. Check-in data indicate that
+from 9 a.m. to 10 a.m., 255 passengers checked in. Moreover, based on counting
+the number of passengers waiting in line, airport management found that the
+average number of passengers waiting for check-in was 35. How long did the
+average passenger have to wait in line?
+
+# Joe’s Beer, Bait & Tackle
+
+Joe’s Beer, Bait, & 
+Tackle Co. is a small chain of fishing tackle stores in northern Minnesota. In 
+2009, the company’s revenue was $4,300,000 and its cost of sales was $3,200,000. Assume 52 
+weeks and 365 days per year.
+JBBT1.
+Joe keeps only 5.5 days
+-
+of
+-
+supply of inventory on average because much of his 
+inventory is live bait and micro
+-
+brew beer, both of which have a short shelf life. What is his 
+annual inventory turns?
+JBBT2. 
+Given that he has 5.5
+-
+days
+-
+of
+-
+supply of inventory on
+average, how much inventory does 
+Joe have on average (in 
+$s
+)? 
+Process Analysis with Multipl
+e Flow Units
+Consider a process consisting of five resources
+that are operated eight hours per day. The 
+process works on three different products, A, B, and C:
+Resource
+Number of 
+workers
+Processing time 
+for A
+(minutes)
+Processing time 
+for B
+(minutes)
+Processing time 
+for C
+(minutes)
+1
+2
+5
+5
+5
+2
+2
+4
+4
+5
+3
+1
+12
+0
+0
+4
+1
+0
+3
+3
+5
+2
+6
+6
+4
+Demand for the three different products is as follows: product A, 40 
+units per day;
+product B, 50 units per day; and product C, 60 units per day.
+PA1. 
+What is the bottleneck? 
+PA2. 
+What is the flow rate for each flow unit assuming that demand
+must be served in the mix 
+described above (i.e., for every four units of A, 
+there are five
+units of B and six units of C)?
+
